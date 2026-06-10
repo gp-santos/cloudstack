@@ -34,13 +34,7 @@ public interface IdpPolicy extends Identity, InternalIdentity {
     Operation getRoleOperation();
 
     String getBindings();
-    void setBindings(String bindings);
-
     String getDescription();
-    void setDescription(String description);
-
     Date getCreated();
-
     Date getRemoved();
-    void setRemoved(Date removed);
 }

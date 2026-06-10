@@ -69,6 +69,8 @@ public class IdpPolicyResponse extends BaseResponse {
         this.description = idpPolicy.getDescription();
         this.idpId = idpPolicy.getIdpId();
         this.userAccountOperation = idpPolicy.getUserAccountOperation().toString();
+        this.domainOperation = idpPolicy.getDomainOperation().toString();
+        this.roleOperation = idpPolicy.getRoleOperation().toString();
         this.mapping = idpPolicy.getBindings();
         this.created = idpPolicy.getCreated();
         this.removed = idpPolicy.getRemoved();

@@ -14,22 +14,13 @@
 // KIND, either express or implied. See the License for the
 // specific language governing permissions and limitations
 // under the License.
-package org.apache.cloudstack.auth.idppolicy;
+package org.apache.cloudstack.auth.idppolicy.dao;
 
-import com.cloud.user.UserAccount;
-import com.cloud.utils.component.PluggableService;
-import org.apache.cloudstack.api.command.admin.idppolicy.CreateIdpPolicyCmd;
-import org.apache.cloudstack.framework.config.ConfigKey;
+import com.cloud.utils.db.GenericDao;
+import org.apache.cloudstack.auth.idppolicy.IdpPolicyVO;
 
-import java.util.Map;
+public interface IdpPolicyDao extends GenericDao<IdpPolicyVO, Long> {
 
-public interface IdpPolicyManager extends PluggableService {
-
-    ConfigKey<Long> IdpPolicyTimeout = new ConfigKey("Advanced", Long.class, "idp.policy.timeout", "2000",
-            "The maximum runtime, in milliseconds, to execute the IdP Policy script.", true);
-
-
-    IdpPolicy createIdpPolicy(CreateIdpPolicyCmd cmd);
-
-    UserAccount login(Map<String, Object> attributes, String idpId);
+    IdpPolicyVO findActiveByIdpId(String idpId);
+    IdpPolicyVO findAnyByIdpId(String idpId);
 }

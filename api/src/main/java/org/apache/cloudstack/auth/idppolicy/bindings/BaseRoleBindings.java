@@ -14,22 +14,34 @@
 // KIND, either express or implied. See the License for the
 // specific language governing permissions and limitations
 // under the License.
-package org.apache.cloudstack.auth.idppolicy;
+package org.apache.cloudstack.auth.idppolicy.bindings;
 
-import com.cloud.user.UserAccount;
-import com.cloud.utils.component.PluggableService;
-import org.apache.cloudstack.api.command.admin.idppolicy.CreateIdpPolicyCmd;
-import org.apache.cloudstack.framework.config.ConfigKey;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 import java.util.Map;
 
-public interface IdpPolicyManager extends PluggableService {
+public class BaseRoleBindings {
+    private String name;
+    private String type;
+    private String uuid;
 
-    ConfigKey<Long> IdpPolicyTimeout = new ConfigKey("Advanced", Long.class, "idp.policy.timeout", "2000",
-            "The maximum runtime, in milliseconds, to execute the IdP Policy script.", true);
+    public BaseRoleBindings() {}
 
+    public String getName() {
+        return name;
+    }
 
-    IdpPolicy createIdpPolicy(CreateIdpPolicyCmd cmd);
+    public String getType() {
+        return type;
+    }
 
-    UserAccount login(Map<String, Object> attributes, String idpId);
+    public String getUuid() {
+        return uuid;
+    }
+
+    @Override
+    public String toString() {
+        return ReflectionToStringBuilder.reflectionToString(this, ToStringStyle.JSON_STYLE);
+    }
 }

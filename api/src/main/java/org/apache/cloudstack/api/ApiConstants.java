@@ -75,6 +75,7 @@ public class ApiConstants {
     public static final String BGP_PEERS = "bgppeers";
     public static final String BGP_PEER_IDS = "bgppeerids";
     public static final String BATCH_SIZE = "batchsize";
+    public static final String BINDINGS = "bindings";
     public static final String BITS = "bits";
     public static final String BOOTABLE = "bootable";
     public static final String BIND_DN = "binddn";
@@ -1409,6 +1410,10 @@ public class ApiConstants {
     public static final String VPN_CUSTOMER_GATEWAY_PARAMETERS = "vpncustomergatewayparameters";
     public static final String OBSOLETE_PARAMETERS = "obsoleteparameters";
     public static final String EXCLUDED_PARAMETERS = "excludedparameters";
+
+    public static final String USERACCOUNT_OPERATION = "useraccountoperation";
+    public static final String DOMAIN_OPERATION = "domainoperation";
+    public static final String ROLE_OPERATION = "roleoperation";
 
     /**
      * This enum specifies IO Drivers, each option controls specific policies on I/O.

@@ -88,6 +88,8 @@
 
     <bean id="resourceCleanupServiceImpl" class="org.apache.cloudstack.resource.ResourceCleanupServiceImpl" />
 
+    <bean id="idpPolicyManagerImpl" class="org.apache.cloudstack.auth.idppolicy.IdpPolicyManagerImpl" />
+
     <!-- the new background poll manager -->
     <bean id="bgPollManager" class="org.apache.cloudstack.poll.BackgroundPollManagerImpl">
     </bean>

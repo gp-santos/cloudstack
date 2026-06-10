@@ -64,6 +64,7 @@ public enum ApiCommandResourceType {
     GuestOsCategory(com.cloud.storage.GuestOsCategory.class),
     GuestOs(com.cloud.storage.GuestOS.class),
     GuestOsMapping(com.cloud.storage.GuestOSHypervisor.class),
+    IdpPolicy(org.apache.cloudstack.auth.idppolicy.IdpPolicy.class),
     Network(com.cloud.network.Network.class),
     NetworkAcl(com.cloud.network.vpc.NetworkACL.class),
     NetworkAclItem(com.cloud.network.vpc.NetworkACLItem.class),
